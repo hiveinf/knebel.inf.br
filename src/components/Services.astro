@@ -15,7 +15,7 @@ const { t } = Astro.props;
     <div class="services-grid">
       {t.items.map((service) => (
         <div class="service-card">
-          <span class="service-emoji">{service.emoji}</span>
+          <span class="service-emoji" aria-hidden="true">{service.emoji}</span>
           <h3>{service.title}</h3>
           <p>{service.description}</p>
         </div>

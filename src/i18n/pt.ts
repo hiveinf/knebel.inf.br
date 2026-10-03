@@ -5,6 +5,10 @@ export const pt: UI = {
     services: 'Serviços',
     contact: 'Contato',
     cta: 'Fale conosco',
+    switchTo: 'Mudar para inglês',
+  },
+  a11y: {
+    skipToContent: 'Pular para o conteúdo',
   },
   hero: {
     label: 'Desenvolvimento · Consultoria · Suporte',

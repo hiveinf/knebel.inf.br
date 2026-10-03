@@ -1,9 +1,10 @@
 ---
+const year = new Date().getFullYear();
 ---
 
 <footer>
   <div class="footer-inner">
-    <span class="footer-name">Knebel &amp; Knebel</span>
+    <span class="footer-name">© {year} Knebel &amp; Knebel LTDA</span>
     <span class="footer-cnpj">CNPJ 43.442.156/0001-35</span>
   </div>
 </footer>
@@ -20,6 +21,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
   }
 
   .footer-name {
@@ -30,6 +33,6 @@
 
   .footer-cnpj {
     font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.7);
   }
 </style>

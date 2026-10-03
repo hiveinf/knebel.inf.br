@@ -9,7 +9,7 @@ interface Props {
 
 const { t, lang } = Astro.props;
 const otherLang = lang === 'pt' ? 'en' : 'pt';
-const currentLangLabel = lang.toUpperCase();
+const otherLangLabel = otherLang.toUpperCase();
 ---
 
 <nav>
@@ -21,7 +21,9 @@ const currentLangLabel = lang.toUpperCase();
     <div class="nav-links">
       <a href="#servicos">{t.services}</a>
       <a href="#contato">{t.contact}</a>
-      <a href={`/${otherLang}/`} class="lang-switcher">🌐 {currentLangLabel}</a>
+      <a href={`/${otherLang}/`} class="lang-switcher" aria-label={t.switchTo}>
+        <span aria-hidden="true">🌐</span> {otherLangLabel}
+      </a>
       <a href="#contato" class="nav-cta">{t.cta}</a>
     </div>
   </div>
@@ -92,6 +94,19 @@ const currentLangLabel = lang.toUpperCase();
     display: flex;
     align-items: center;
     gap: 0.2rem;
+  }
+
+  .lang-switcher,
+  .nav-cta {
+    position: relative;
+  }
+
+  /* Expande a área clicável sem alterar o visual (alvo de toque) */
+  .lang-switcher::after,
+  .nav-cta::after {
+    content: '';
+    position: absolute;
+    inset: -0.625rem -0.5rem;
   }
 
   .nav-cta {

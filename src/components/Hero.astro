@@ -31,6 +31,7 @@ const { t } = Astro.props;
     overflow: hidden;
     padding: 8rem 1.5rem 5rem;
     min-height: 90vh;
+    min-height: 90svh;
     display: flex;
     align-items: center;
   }
@@ -106,6 +107,9 @@ const { t } = Astro.props;
   }
 
   .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
     background: var(--gradient-brand);
     color: white;
     text-decoration: none;
@@ -121,6 +125,10 @@ const { t } = Astro.props;
   }
 
   .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0 0.25rem;
     color: var(--color-primary);
     text-decoration: none;
     font-size: 0.875rem;

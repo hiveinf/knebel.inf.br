@@ -23,10 +23,10 @@ Commits sem prefixo Jira.
 | `--color-accent` | `#d97706` | Âmbar/dourado — cor de destaque |
 | `--color-text` | `#0c1a2e` | Texto principal |
 | `--color-text-secondary` | `#64748b` | Texto secundário |
-| `--color-text-muted` | `#94a3b8` | Labels, metadados |
+| `--color-text-muted` | `#5f6f82` | Labels, metadados |
 | `--color-footer-bg` | `#0c1a2e` | Fundo do footer |
 | `--color-card-bg` | `#ffffff` | Fundo de cards |
-| `--gradient-brand` | `linear-gradient(90deg, #0369a1, #d97706)` | Gradiente navy→âmbar |
+| `--gradient-brand` | `linear-gradient(90deg, #0369a1, #b45309)` | Gradiente navy→âmbar (tom AA para texto) |
 | `--gradient-contact-bg` | `linear-gradient(180deg, #fdfaf4, #f0eade)` | Fundo da seção contato |
 
 ### Efeito Aurora Light

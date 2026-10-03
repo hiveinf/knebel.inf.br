@@ -17,8 +17,9 @@ const t = useTranslations(lang);
 ---
 
 <Base lang={lang}>
+  <a class="skip-link" href="#conteudo">{t.a11y.skipToContent}</a>
   <Nav t={t.nav} lang={lang} />
-  <main>
+  <main id="conteudo">
     <Hero t={t.hero} />
     <Services t={t.services} />
     <Contact t={t.contact} />
