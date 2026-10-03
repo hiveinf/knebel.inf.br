@@ -5,6 +5,10 @@ export const en: UI = {
     services: 'Services',
     contact: 'Contact',
     cta: 'Get in touch',
+    switchTo: 'Switch to Portuguese',
+  },
+  a11y: {
+    skipToContent: 'Skip to content',
   },
   hero: {
     label: 'Development · Consulting · Support',

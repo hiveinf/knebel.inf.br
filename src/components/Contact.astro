@@ -15,7 +15,7 @@ const { t } = Astro.props;
     <p class="contact-description">{t.description}</p>
     <div class="contact-cards">
       <a href={`mailto:${t.email}`} class="contact-card">
-        <div class="contact-icon contact-icon--gradient">✉</div>
+        <div class="contact-icon contact-icon--gradient" aria-hidden="true">✉</div>
         <div class="contact-info">
           <span class="contact-label-text">{t.general}</span>
           <span class="contact-email">{t.email}</span>
@@ -23,7 +23,7 @@ const { t } = Astro.props;
       </a>
       <div class="contact-partners">
         <div class="contact-card">
-          <div class="contact-icon contact-icon--navy">F</div>
+          <div class="contact-icon contact-icon--navy" aria-hidden="true">F</div>
           <div class="contact-info">
             <span class="contact-label-text">Francisco</span>
             <a href="mailto:francisco@knebel.inf.br" class="contact-email">francisco@knebel.inf.br</a>
@@ -31,7 +31,7 @@ const { t } = Astro.props;
           </div>
         </div>
         <a href="mailto:norberto@knebel.inf.br" class="contact-card">
-          <div class="contact-icon contact-icon--amber">N</div>
+          <div class="contact-icon contact-icon--amber" aria-hidden="true">N</div>
           <div class="contact-info">
             <span class="contact-label-text">Norberto</span>
             <span class="contact-email">norberto@knebel.inf.br</span>

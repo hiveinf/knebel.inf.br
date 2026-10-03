@@ -3,6 +3,10 @@ export interface UI {
     services: string;
     contact: string;
     cta: string;
+    switchTo: string;
+  };
+  a11y: {
+    skipToContent: string;
   };
   hero: {
     label: string;
