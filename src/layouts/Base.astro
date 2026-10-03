@@ -14,8 +14,8 @@ const DEFAULT_TITLES: Record<Lang, string> = {
 };
 
 const DEFAULT_DESCRIPTIONS: Record<Lang, string> = {
-  pt: 'Knebel & Knebel oferece desenvolvimento de software, consultoria em TI e suporte técnico. Atendimento remoto em todo o Brasil.',
-  en: 'Knebel & Knebel offers software development, IT consulting and technical support. Remote service across Brazil.',
+  pt: 'Knebel & Knebel: desenvolvimento de software, consultoria em TI e suporte técnico. Empresa de Ijuí/RS com atendimento remoto em todo o Brasil.',
+  en: 'Knebel & Knebel: software development, IT consulting and technical support. Based in Ijuí, Brazil, serving clients remotely nationwide.',
 };
 
 const { lang, title: titleProp, description: descProp } = Astro.props;
@@ -25,6 +25,30 @@ const description = descProp ?? DEFAULT_DESCRIPTIONS[lang];
 const site = 'https://knebel.inf.br';
 const htmlLang = lang === 'pt' ? 'pt-BR' : 'en';
 const canonicalURL = `${site}/${lang}/`;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Knebel & Knebel',
+  legalName: 'Knebel & Knebel LTDA',
+  url: `${site}/`,
+  logo: `${site}/favicon.svg`,
+  image: `${site}/og-image.jpg`,
+  description,
+  taxID: '43.442.156/0001-35',
+  foundingDate: '2021-09-08',
+  email: 'contato@knebel.inf.br',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Rua Sete de Setembro, 244',
+    addressLocality: 'Ijuí',
+    addressRegion: 'RS',
+    postalCode: '98700-000',
+    addressCountry: 'BR',
+  },
+  areaServed: { '@type': 'Country', name: 'Brazil' },
+  knowsLanguage: ['pt-BR', 'en'],
+};
 ---
 
 <!doctype html>
@@ -34,15 +58,25 @@ const canonicalURL = `${site}/${lang}/`;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#fdfaf4" />
     <link rel="canonical" href={canonicalURL} />
     <link rel="alternate" hreflang="pt-BR" href={`${site}/pt/`} />
     <link rel="alternate" hreflang="en" href={`${site}/en/`} />
     <link rel="alternate" hreflang="x-default" href={`${site}/pt/`} />
+    <meta property="og:site_name" content="Knebel & Knebel" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content={lang === 'pt' ? 'pt_BR' : 'en_US'} />
+    <meta property="og:locale:alternate" content={lang === 'pt' ? 'en_US' : 'pt_BR'} />
+    <meta property="og:image" content={`${site}/og-image.jpg`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   </head>
   <body>
     <slot />

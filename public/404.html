@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Página não encontrada | Knebel &amp; Knebel</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      :root {
+        --color-bg: #fdfaf4;
+        --color-primary: #0369a1;
+        --color-text: #0c1a2e;
+        --color-text-secondary: #64748b;
+        --color-text-muted: #5f6f82;
+        --gradient-brand: linear-gradient(90deg, #0369a1, #b45309);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        font-family: system-ui, -apple-system, sans-serif;
+        background: var(--color-bg);
+        color: var(--color-text);
+      }
+
+      .label {
+        font-size: 0.65rem;
+        letter-spacing: 0.25rem;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+      }
+
+      h1 {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        font-weight: 900;
+        letter-spacing: -0.03em;
+      }
+
+      p {
+        color: var(--color-text-secondary);
+        line-height: 1.7;
+        max-width: 32rem;
+      }
+
+      .actions {
+        display: flex;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0.5rem;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        min-height: 2.75rem;
+        font-size: 0.875rem;
+      }
+
+      .btn-primary {
+        background: var(--gradient-brand);
+        color: #ffffff;
+        text-decoration: none;
+        padding: 0.75rem 1.75rem;
+        border-radius: 20px;
+        font-weight: 600;
+      }
+
+      .btn-secondary {
+        color: var(--color-primary);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0 0.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="label">404</p>
+    <h1>Página não encontrada</h1>
+    <p>
+      O endereço que você acessou não existe ou foi movido.<br />
+      The page you requested could not be found.
+    </p>
+    <div class="actions">
+      <a class="btn-primary" href="/pt/">Ir para o site</a>
+      <a class="btn-secondary" href="/en/">Go to the site (EN)</a>
+    </div>
+  </body>
+</html>
